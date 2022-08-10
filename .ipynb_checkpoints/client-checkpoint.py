@@ -6,5 +6,6 @@ def client_survey(client_df, user):
     for column in user.keys():
         if column!='userId':
             user[column]=np.random.randint(0,6)
-    return pd.concat([client_df ,user]).T
 
+    updated_clients=pd.concat([client_df ,user])
+    return updated_clients
