@@ -51,6 +51,8 @@ if __name__== "__main__":
     print(clients.index)
     #print(clients[clients.loc[,]])
     #clients=clients.sort_index()
+    
+    # using cosine similarity
     sim_df=similarity_func.get_cos_sim(breeds, clients)
     #print(sim_df)
-    print(similarity_func.find_sim_breeds(clients,breeds, sim_df, 9, 10))
+    print(similarity_func.find_sim_breeds(clients=clients, breeds=breeds, sim_df=sim_df, userId=9, top_n=10))
